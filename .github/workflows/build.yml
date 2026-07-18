@@ -54,10 +54,11 @@ jobs:
 
       - name: Download Android SDK components (if needed)
         run: |
+          yes | sdkmanager --licenses --sdk_root=${ANDROID_HOME} || true
           sdkmanager --install "platforms;android-35" "build-tools;35.0.0" --sdk_root=${ANDROID_HOME} || true
 
       - name: Build APK
-        run: ./gradlew assembleRelease --no-daemon --stacktrace --info
+        run: ./gradlew assembleRelease --no-daemon --stacktrace --info --refresh-dependencies
         env:
           JAVA_HOME: ${{ env.JAVA_HOME }}
           ANDROID_HOME: ${{ env.ANDROID_HOME }}
