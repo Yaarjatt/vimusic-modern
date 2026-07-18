@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.components.themed
+package com.hmusic.new.ui.components.themed
 
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
@@ -48,12 +48,12 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
-import it.vfsfitvnm.vimusic.ui.styling.LocalAppearance
-import it.vfsfitvnm.vimusic.utils.center
-import it.vfsfitvnm.vimusic.utils.drawCircle
-import it.vfsfitvnm.vimusic.utils.medium
-import it.vfsfitvnm.vimusic.utils.secondary
-import it.vfsfitvnm.vimusic.utils.semiBold
+import com.hmusic.new.ui.styling.LocalAppearance
+import com.hmusic.new.utils.center
+import com.hmusic.new.utils.drawCircle
+import com.hmusic.new.utils.medium
+import com.hmusic.new.utils.secondary
+import com.hmusic.new.utils.semiBold
 import kotlinx.coroutines.delay
 
 @Composable

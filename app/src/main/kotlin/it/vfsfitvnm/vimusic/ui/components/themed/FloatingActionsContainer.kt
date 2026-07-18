@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.components.themed
+package com.hmusic.new.ui.components.themed
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.ExperimentalAnimationApi
@@ -24,11 +24,11 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import it.vfsfitvnm.vimusic.LocalPlayerAwareWindowInsets
-import it.vfsfitvnm.vimusic.R
-import it.vfsfitvnm.vimusic.utils.ScrollingInfo
-import it.vfsfitvnm.vimusic.utils.scrollingInfo
-import it.vfsfitvnm.vimusic.utils.smoothScrollToTop
+import com.hmusic.new.LocalPlayerAwareWindowInsets
+import com.hmusic.new.R
+import com.hmusic.new.utils.ScrollingInfo
+import com.hmusic.new.utils.scrollingInfo
+import com.hmusic.new.utils.smoothScrollToTop
 import kotlinx.coroutines.launch
 
 @ExperimentalAnimationApi

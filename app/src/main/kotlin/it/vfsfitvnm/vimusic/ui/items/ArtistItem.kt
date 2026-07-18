@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.items
+package com.hmusic.new.ui.items
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Spacer
@@ -15,14 +15,14 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
-import it.vfsfitvnm.vimusic.models.Artist
-import it.vfsfitvnm.vimusic.ui.components.themed.TextPlaceholder
-import it.vfsfitvnm.vimusic.ui.styling.LocalAppearance
-import it.vfsfitvnm.vimusic.ui.styling.shimmer
-import it.vfsfitvnm.vimusic.utils.secondary
-import it.vfsfitvnm.vimusic.utils.semiBold
-import it.vfsfitvnm.vimusic.utils.thumbnail
-import it.vfsfitvnm.innertube.Innertube
+import com.hmusic.new.models.Artist
+import com.hmusic.new.ui.components.themed.TextPlaceholder
+import com.hmusic.new.ui.styling.LocalAppearance
+import com.hmusic.new.ui.styling.shimmer
+import com.hmusic.new.utils.secondary
+import com.hmusic.new.utils.semiBold
+import com.hmusic.new.utils.thumbnail
+import com.hmusic.new.innertube.Innertube
 
 @Composable
 fun ArtistItem(

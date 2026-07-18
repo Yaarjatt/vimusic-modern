@@ -4,12 +4,12 @@ plugins {
 }
 
 android {
-    namespace = "it.vfsfitvnm.compose.routing"
-    compileSdk = 33
+    namespace = "com.hmusic.new.compose.routing"
+    compileSdk = 35
 
     defaultConfig {
-        minSdk = 21
-        targetSdk = 33
+        minSdk = 26
+        targetSdk = 35
     }
 
     buildTypes {

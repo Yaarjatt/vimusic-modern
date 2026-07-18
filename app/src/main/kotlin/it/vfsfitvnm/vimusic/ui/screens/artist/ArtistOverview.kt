@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.screens.artist
+package com.hmusic.new.ui.screens.artist
 
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -26,31 +26,31 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import it.vfsfitvnm.innertube.Innertube
-import it.vfsfitvnm.innertube.models.NavigationEndpoint
-import it.vfsfitvnm.vimusic.LocalPlayerAwareWindowInsets
-import it.vfsfitvnm.vimusic.LocalPlayerServiceBinder
-import it.vfsfitvnm.vimusic.R
-import it.vfsfitvnm.vimusic.ui.components.LocalMenuState
-import it.vfsfitvnm.vimusic.ui.components.ShimmerHost
-import it.vfsfitvnm.vimusic.ui.components.themed.FloatingActionsContainerWithScrollToTop
-import it.vfsfitvnm.vimusic.ui.components.themed.LayoutWithAdaptiveThumbnail
-import it.vfsfitvnm.vimusic.ui.components.themed.NonQueuedMediaItemMenu
-import it.vfsfitvnm.vimusic.ui.components.themed.SecondaryTextButton
-import it.vfsfitvnm.vimusic.ui.components.themed.TextPlaceholder
-import it.vfsfitvnm.vimusic.ui.items.AlbumItem
-import it.vfsfitvnm.vimusic.ui.items.AlbumItemPlaceholder
-import it.vfsfitvnm.vimusic.ui.items.SongItem
-import it.vfsfitvnm.vimusic.ui.items.SongItemPlaceholder
-import it.vfsfitvnm.vimusic.ui.styling.Dimensions
-import it.vfsfitvnm.vimusic.ui.styling.LocalAppearance
-import it.vfsfitvnm.vimusic.ui.styling.px
-import it.vfsfitvnm.vimusic.utils.align
-import it.vfsfitvnm.vimusic.utils.asMediaItem
-import it.vfsfitvnm.vimusic.utils.color
-import it.vfsfitvnm.vimusic.utils.forcePlay
-import it.vfsfitvnm.vimusic.utils.secondary
-import it.vfsfitvnm.vimusic.utils.semiBold
+import com.hmusic.new.innertube.Innertube
+import com.hmusic.new.innertube.models.NavigationEndpoint
+import com.hmusic.new.LocalPlayerAwareWindowInsets
+import com.hmusic.new.LocalPlayerServiceBinder
+import com.hmusic.new.R
+import com.hmusic.new.ui.components.LocalMenuState
+import com.hmusic.new.ui.components.ShimmerHost
+import com.hmusic.new.ui.components.themed.FloatingActionsContainerWithScrollToTop
+import com.hmusic.new.ui.components.themed.LayoutWithAdaptiveThumbnail
+import com.hmusic.new.ui.components.themed.NonQueuedMediaItemMenu
+import com.hmusic.new.ui.components.themed.SecondaryTextButton
+import com.hmusic.new.ui.components.themed.TextPlaceholder
+import com.hmusic.new.ui.items.AlbumItem
+import com.hmusic.new.ui.items.AlbumItemPlaceholder
+import com.hmusic.new.ui.items.SongItem
+import com.hmusic.new.ui.items.SongItemPlaceholder
+import com.hmusic.new.ui.styling.Dimensions
+import com.hmusic.new.ui.styling.LocalAppearance
+import com.hmusic.new.ui.styling.px
+import com.hmusic.new.utils.align
+import com.hmusic.new.utils.asMediaItem
+import com.hmusic.new.utils.color
+import com.hmusic.new.utils.forcePlay
+import com.hmusic.new.utils.secondary
+import com.hmusic.new.utils.semiBold
 
 @ExperimentalFoundationApi
 @ExperimentalAnimationApi

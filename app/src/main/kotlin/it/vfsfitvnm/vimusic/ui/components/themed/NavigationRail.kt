@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.components.themed
+package com.hmusic.new.ui.components.themed
 
 import androidx.compose.animation.animateColor
 import androidx.compose.animation.core.animateFloat
@@ -32,13 +32,13 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.layout.layout
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import it.vfsfitvnm.vimusic.LocalPlayerAwareWindowInsets
-import it.vfsfitvnm.vimusic.ui.styling.Dimensions
-import it.vfsfitvnm.vimusic.ui.styling.LocalAppearance
-import it.vfsfitvnm.vimusic.utils.center
-import it.vfsfitvnm.vimusic.utils.color
-import it.vfsfitvnm.vimusic.utils.isLandscape
-import it.vfsfitvnm.vimusic.utils.semiBold
+import com.hmusic.new.LocalPlayerAwareWindowInsets
+import com.hmusic.new.ui.styling.Dimensions
+import com.hmusic.new.ui.styling.LocalAppearance
+import com.hmusic.new.utils.center
+import com.hmusic.new.utils.color
+import com.hmusic.new.utils.isLandscape
+import com.hmusic.new.utils.semiBold
 
 @Composable
 inline fun NavigationRail(

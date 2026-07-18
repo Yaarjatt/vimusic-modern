@@ -1,59 +1,87 @@
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
 
     repositories {
         google()
         mavenCentral()
-        maven { setUrl("https://jitpack.io") }
+        maven { url = uri("https://jitpack.io") }
     }
 
     versionCatalogs {
         create("libs") {
-            version("kotlin", "1.7.20")
-            plugin("kotlin-serialization","org.jetbrains.kotlin.plugin.serialization").versionRef("kotlin")
+            version("kotlin", "2.0.21")
+            version("agp", "8.7.3")
 
-            library("kotlin-coroutines","org.jetbrains.kotlinx", "kotlinx-coroutines-core").version("1.6.4")
+            plugin("kotlin-serialization", "org.jetbrains.kotlin.plugin.serialization").versionRef("kotlin")
 
-            version("compose-compiler", "1.3.2")
+            library("kotlin-coroutines-core", "org.jetbrains.kotlinx", "kotlinx-coroutines-core").version("1.9.0")
+            library("kotlin-coroutines-android", "org.jetbrains.kotlinx", "kotlinx-coroutines-android").version("1.9.0")
 
-            version("compose", "1.3.0-rc01")
-            library("compose-foundation", "androidx.compose.foundation", "foundation").versionRef("compose")
-            library("compose-ui", "androidx.compose.ui", "ui").versionRef("compose")
-            library("compose-ui-util", "androidx.compose.ui", "ui-util").versionRef("compose")
-            library("compose-ripple", "androidx.compose.material", "material-ripple").versionRef("compose")
+            version("compose-bom", "2024.09.00")
+            library("compose-bom", "androidx.compose", "compose-bom").versionRef("compose-bom")
 
-            library("compose-shimmer", "com.valentinilk.shimmer", "compose-shimmer").version("1.0.3")
+            library("compose-foundation", "androidx.compose.foundation", "foundation").versionRef("compose-bom")
+            library("compose-ui", "androidx.compose.ui", "ui").versionRef("compose-bom")
+            library("compose-ui-util", "androidx.compose.ui", "ui-util").versionRef("compose-bom")
+            library("compose-material3", "androidx.compose.material3", "material3").versionRef("compose-bom")
+            library("compose-material3-window-size", "androidx.compose.material3", "material3-window-size-class").version("1.3.0")
+            library("compose-activity", "androidx.activity", "activity-compose").version("1.9.3")
+            library("compose-viewmodel", "androidx.lifecycle", "lifecycle-viewmodel-compose").version("2.8.6")
+            library("compose-navigation", "androidx.navigation", "navigation-compose").version("2.8.2")
 
-            library("compose-activity", "androidx.activity", "activity-compose").version("1.7.0-alpha01")
+            library("compose-shimmer", "com.valentinilk.shimmer", "compose-shimmer").version("1.3.2")
 
-            library("compose-coil", "io.coil-kt", "coil-compose").version("2.2.2")
+            version("compose-compiler", "1.5.15")
+            plugin("compose-compiler", "org.jetbrains.kotlin.plugin.compose").versionRef("compose-compiler")
 
-            version("room", "2.5.0-beta01")
-            library("room", "androidx.room", "room-ktx").versionRef("room")
+            version("room", "2.6.1")
+            library("room-runtime", "androidx.room", "room-runtime").versionRef("room")
+            library("room-ktx", "androidx.room", "room-ktx").versionRef("room")
             library("room-compiler", "androidx.room", "room-compiler").versionRef("room")
 
-            version("media3", "1.0.0-beta03")
-            library("exoplayer", "androidx.media3", "media3-exoplayer").versionRef("media3")
+            version("media3", "1.4.1")
+            library("media3-exoplayer", "androidx.media3", "media3-exoplayer").versionRef("media3")
+            library("media3-session", "androidx.media3", "media3-session").versionRef("media3")
+            library("media3-datasource", "androidx.media3", "media3-datasource").versionRef("media3")
+            library("media3-common", "androidx.media3", "media3-common").versionRef("media3")
+            library("media3-ui", "androidx.media3", "media3-ui").versionRef("media3")
 
-            version("ktor", "2.1.2")
+            version("ktor", "3.0.2")
             library("ktor-client-core", "io.ktor", "ktor-client-core").versionRef("ktor")
-            library("ktor-client-cio", "io.ktor", "ktor-client-okhttp").versionRef("ktor")
+            library("ktor-client-okhttp", "io.ktor", "ktor-client-okhttp").versionRef("ktor")
+            library("ktor-client-cio", "io.ktor", "ktor-client-cio").versionRef("ktor")
             library("ktor-client-content-negotiation", "io.ktor", "ktor-client-content-negotiation").versionRef("ktor")
             library("ktor-client-encoding", "io.ktor", "ktor-client-encoding").versionRef("ktor")
-            library("ktor-client-serialization", "io.ktor", "ktor-client-serialization").versionRef("ktor")
-            library("ktor-serialization-json", "io.ktor", "ktor-serialization-kotlinx-json").versionRef("ktor")
+            library("ktor-serialization-kotlinx-json", "io.ktor", "ktor-serialization-kotlinx-json").versionRef("ktor")
+
+            library("kotlinx-serialization-json", "org.jetbrains.kotlinx", "kotlinx-serialization-json").version("1.7.3")
+
+            library("coil", "io.coil-kt", "coil-compose").version("2.7.0")
+            library("coil-video", "io.coil-kt", "coil-video").version("2.7.0")
 
             library("brotli", "org.brotli", "dec").version("0.1.2")
 
-            library("palette", "androidx.palette", "palette").version("1.0.0")
+            version("palette", "1.0.0")
+            library("palette-ktx", "androidx.palette", "palette-ktx").versionRef("palette")
 
-            library("desugaring", "com.android.tools", "desugar_jdk_libs").version("1.1.5")
+            version("desugaring", "2.1.3")
+            library("desugar", "com.android.tools", "desugar_jdk_libs").versionRef("desugaring")
         }
 
         create("testLibs") {
             library("junit", "junit", "junit").version("4.13.2")
+            library("androidx-test", "androidx.test.ext", "junit-ktx").version("1.2.1")
+            library("espresso", "androidx.test.espresso", "espresso-core").version("3.6.1")
         }
     }
 }

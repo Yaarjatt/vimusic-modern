@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.utils
+package com.hmusic.new.utils
 
 import androidx.media3.common.C
 import androidx.media3.common.MediaItem

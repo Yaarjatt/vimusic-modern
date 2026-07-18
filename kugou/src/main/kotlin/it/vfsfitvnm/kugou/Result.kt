@@ -1,4 +1,4 @@
-package it.vfsfitvnm.kugou
+package com.hmusic.new.kugou
 
 import kotlin.coroutines.cancellation.CancellationException
 

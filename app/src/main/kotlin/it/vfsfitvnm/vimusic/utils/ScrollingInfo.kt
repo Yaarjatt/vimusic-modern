@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.utils
+package com.hmusic.new.utils
 
 import androidx.compose.foundation.ScrollState
 import androidx.compose.foundation.lazy.LazyListState

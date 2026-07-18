@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.screens.player
+package com.hmusic.new.ui.screens.player
 
 import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.animateDp
@@ -35,23 +35,23 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.media3.common.C
 import androidx.media3.common.Player
-import it.vfsfitvnm.vimusic.Database
-import it.vfsfitvnm.vimusic.LocalPlayerServiceBinder
-import it.vfsfitvnm.vimusic.R
-import it.vfsfitvnm.vimusic.models.Song
-import it.vfsfitvnm.vimusic.query
-import it.vfsfitvnm.vimusic.ui.components.SeekBar
-import it.vfsfitvnm.vimusic.ui.components.themed.IconButton
-import it.vfsfitvnm.vimusic.ui.styling.LocalAppearance
-import it.vfsfitvnm.vimusic.ui.styling.favoritesIcon
-import it.vfsfitvnm.vimusic.utils.bold
-import it.vfsfitvnm.vimusic.utils.forceSeekToNext
-import it.vfsfitvnm.vimusic.utils.forceSeekToPrevious
-import it.vfsfitvnm.vimusic.utils.formatAsDuration
-import it.vfsfitvnm.vimusic.utils.rememberPreference
-import it.vfsfitvnm.vimusic.utils.secondary
-import it.vfsfitvnm.vimusic.utils.semiBold
-import it.vfsfitvnm.vimusic.utils.trackLoopEnabledKey
+import com.hmusic.new.Database
+import com.hmusic.new.LocalPlayerServiceBinder
+import com.hmusic.new.R
+import com.hmusic.new.models.Song
+import com.hmusic.new.query
+import com.hmusic.new.ui.components.SeekBar
+import com.hmusic.new.ui.components.themed.IconButton
+import com.hmusic.new.ui.styling.LocalAppearance
+import com.hmusic.new.ui.styling.favoritesIcon
+import com.hmusic.new.utils.bold
+import com.hmusic.new.utils.forceSeekToNext
+import com.hmusic.new.utils.forceSeekToPrevious
+import com.hmusic.new.utils.formatAsDuration
+import com.hmusic.new.utils.rememberPreference
+import com.hmusic.new.utils.secondary
+import com.hmusic.new.utils.semiBold
+import com.hmusic.new.utils.trackLoopEnabledKey
 import kotlinx.coroutines.flow.distinctUntilChanged
 
 @Composable

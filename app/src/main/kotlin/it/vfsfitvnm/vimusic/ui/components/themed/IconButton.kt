@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.components.themed
+package com.hmusic.new.ui.components.themed
 
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image

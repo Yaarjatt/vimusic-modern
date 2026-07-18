@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.styling
+package com.hmusic.new.ui.styling
 
 import android.graphics.Bitmap
 import androidx.compose.runtime.Immutable
@@ -8,8 +8,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import androidx.core.graphics.ColorUtils
 import androidx.palette.graphics.Palette
-import it.vfsfitvnm.vimusic.enums.ColorPaletteMode
-import it.vfsfitvnm.vimusic.enums.ColorPaletteName
+import com.hmusic.new.enums.ColorPaletteMode
+import com.hmusic.new.enums.ColorPaletteName
 
 @Immutable
 data class ColorPalette(

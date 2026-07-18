@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.utils
+package com.hmusic.new.utils
 
 import android.net.Uri
 import android.os.Build
@@ -7,11 +7,11 @@ import androidx.core.net.toUri
 import androidx.core.os.bundleOf
 import androidx.media3.common.MediaItem
 import androidx.media3.common.MediaMetadata
-import it.vfsfitvnm.innertube.Innertube
-import it.vfsfitvnm.innertube.models.bodies.ContinuationBody
-import it.vfsfitvnm.innertube.requests.playlistPage
-import it.vfsfitvnm.innertube.utils.plus
-import it.vfsfitvnm.vimusic.models.Song
+import com.hmusic.new.innertube.Innertube
+import com.hmusic.new.innertube.models.bodies.ContinuationBody
+import com.hmusic.new.innertube.requests.playlistPage
+import com.hmusic.new.innertube.utils.plus
+import com.hmusic.new.models.Song
 
 val Innertube.SongItem.asMediaItem: MediaItem
     get() = MediaItem.Builder()

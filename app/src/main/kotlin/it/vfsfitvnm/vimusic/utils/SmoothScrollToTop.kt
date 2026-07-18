@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.utils
+package com.hmusic.new.utils
 
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.grid.LazyGridState

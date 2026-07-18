@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.components.themed
+package com.hmusic.new.ui.components.themed
 
 import androidx.compose.animation.animateColor
 import androidx.compose.animation.core.animateDp
@@ -14,8 +14,8 @@ import androidx.compose.ui.geometry.center
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shadow
 import androidx.compose.ui.unit.dp
-import it.vfsfitvnm.vimusic.ui.styling.LocalAppearance
-import it.vfsfitvnm.vimusic.utils.drawCircle
+import com.hmusic.new.ui.styling.LocalAppearance
+import com.hmusic.new.utils.drawCircle
 
 @Composable
 fun Switch(

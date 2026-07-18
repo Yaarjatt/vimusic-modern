@@ -1,12 +1,13 @@
-package it.vfsfitvnm.innertube.requests
+package com.hmusic.new.innertube.requests
 
 import io.ktor.http.Url
-import it.vfsfitvnm.innertube.Innertube
-import it.vfsfitvnm.innertube.models.NavigationEndpoint
-import it.vfsfitvnm.innertube.models.bodies.BrowseBody
+import com.hmusic.new.innertube.Innertube
+import com.hmusic.new.innertube.models.NavigationEndpoint
+import com.hmusic.new.innertube.models.bodies.BrowseBody
 
 suspend fun Innertube.albumPage(body: BrowseBody): Result<Innertube.PlaylistOrAlbumPage>? {
-    return playlistPage(body)?.map { album ->
+    return try {
+        playlistPage(body)?.map { album ->
         album.url?.let { Url(it).parameters["list"] }?.let { playlistId ->
             playlistPage(BrowseBody(browseId = "VL$playlistId"))?.getOrNull()?.let { playlist ->
                 album.copy(songsPage = playlist.songsPage)
@@ -32,5 +33,7 @@ suspend fun Innertube.albumPage(body: BrowseBody): Result<Innertube.PlaylistOrAl
                 }
             )
         )
+    } catch (e: Exception) {
+        null
     }
 }

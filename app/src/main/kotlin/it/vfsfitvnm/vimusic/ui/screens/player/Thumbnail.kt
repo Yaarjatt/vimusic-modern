@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.screens.player
+package com.hmusic.new.ui.screens.player
 
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.AnimatedContentScope
@@ -30,18 +30,18 @@ import androidx.media3.common.MediaItem
 import androidx.media3.common.PlaybackException
 import androidx.media3.common.Player
 import coil.compose.AsyncImage
-import it.vfsfitvnm.vimusic.Database
-import it.vfsfitvnm.vimusic.LocalPlayerServiceBinder
-import it.vfsfitvnm.vimusic.service.LoginRequiredException
-import it.vfsfitvnm.vimusic.service.PlayableFormatNotFoundException
-import it.vfsfitvnm.vimusic.service.UnplayableException
-import it.vfsfitvnm.vimusic.service.VideoIdMismatchException
-import it.vfsfitvnm.vimusic.ui.styling.Dimensions
-import it.vfsfitvnm.vimusic.ui.styling.LocalAppearance
-import it.vfsfitvnm.vimusic.ui.styling.px
-import it.vfsfitvnm.vimusic.utils.currentWindow
-import it.vfsfitvnm.vimusic.utils.DisposableListener
-import it.vfsfitvnm.vimusic.utils.thumbnail
+import com.hmusic.new.Database
+import com.hmusic.new.LocalPlayerServiceBinder
+import com.hmusic.new.service.LoginRequiredException
+import com.hmusic.new.service.PlayableFormatNotFoundException
+import com.hmusic.new.service.UnplayableException
+import com.hmusic.new.service.VideoIdMismatchException
+import com.hmusic.new.ui.styling.Dimensions
+import com.hmusic.new.ui.styling.LocalAppearance
+import com.hmusic.new.ui.styling.px
+import com.hmusic.new.utils.currentWindow
+import com.hmusic.new.utils.DisposableListener
+import com.hmusic.new.utils.thumbnail
 import java.net.UnknownHostException
 import java.nio.channels.UnresolvedAddressException
 

@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.enums
+package com.hmusic.new.enums
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
@@ -6,7 +6,7 @@ import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.unit.dp
-import it.vfsfitvnm.vimusic.ui.styling.LocalAppearance
+import com.hmusic.new.ui.styling.LocalAppearance
 
 enum class ThumbnailRoundness {
     None,

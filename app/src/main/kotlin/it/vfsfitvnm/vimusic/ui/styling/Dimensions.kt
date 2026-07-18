@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.styling
+package com.hmusic.new.ui.styling
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalConfiguration

@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.screens.settings
+package com.hmusic.new.ui.screens.settings
 
 import android.content.ActivityNotFoundException
 import android.content.Intent
@@ -20,17 +20,17 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
-import it.vfsfitvnm.vimusic.LocalPlayerAwareWindowInsets
-import it.vfsfitvnm.vimusic.LocalPlayerServiceBinder
-import it.vfsfitvnm.vimusic.ui.components.themed.Header
-import it.vfsfitvnm.vimusic.ui.styling.LocalAppearance
-import it.vfsfitvnm.vimusic.utils.isAtLeastAndroid6
-import it.vfsfitvnm.vimusic.utils.persistentQueueKey
-import it.vfsfitvnm.vimusic.utils.rememberPreference
-import it.vfsfitvnm.vimusic.utils.resumePlaybackWhenDeviceConnectedKey
-import it.vfsfitvnm.vimusic.utils.skipSilenceKey
-import it.vfsfitvnm.vimusic.utils.toast
-import it.vfsfitvnm.vimusic.utils.volumeNormalizationKey
+import com.hmusic.new.LocalPlayerAwareWindowInsets
+import com.hmusic.new.LocalPlayerServiceBinder
+import com.hmusic.new.ui.components.themed.Header
+import com.hmusic.new.ui.styling.LocalAppearance
+import com.hmusic.new.utils.isAtLeastAndroid6
+import com.hmusic.new.utils.persistentQueueKey
+import com.hmusic.new.utils.rememberPreference
+import com.hmusic.new.utils.resumePlaybackWhenDeviceConnectedKey
+import com.hmusic.new.utils.skipSilenceKey
+import com.hmusic.new.utils.toast
+import com.hmusic.new.utils.volumeNormalizationKey
 
 @ExperimentalAnimationApi
 @Composable

@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.screens.home
+package com.hmusic.new.ui.screens.home
 
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.animation.core.LinearEasing
@@ -30,28 +30,28 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.unit.dp
-import it.vfsfitvnm.compose.persist.persistList
-import it.vfsfitvnm.vimusic.Database
-import it.vfsfitvnm.vimusic.LocalPlayerAwareWindowInsets
-import it.vfsfitvnm.vimusic.R
-import it.vfsfitvnm.vimusic.enums.BuiltInPlaylist
-import it.vfsfitvnm.vimusic.enums.PlaylistSortBy
-import it.vfsfitvnm.vimusic.enums.SortOrder
-import it.vfsfitvnm.vimusic.models.Playlist
-import it.vfsfitvnm.vimusic.models.PlaylistPreview
-import it.vfsfitvnm.vimusic.query
-import it.vfsfitvnm.vimusic.ui.components.themed.FloatingActionsContainerWithScrollToTop
-import it.vfsfitvnm.vimusic.ui.components.themed.Header
-import it.vfsfitvnm.vimusic.ui.components.themed.HeaderIconButton
-import it.vfsfitvnm.vimusic.ui.components.themed.SecondaryTextButton
-import it.vfsfitvnm.vimusic.ui.components.themed.TextFieldDialog
-import it.vfsfitvnm.vimusic.ui.items.PlaylistItem
-import it.vfsfitvnm.vimusic.ui.styling.Dimensions
-import it.vfsfitvnm.vimusic.ui.styling.LocalAppearance
-import it.vfsfitvnm.vimusic.ui.styling.px
-import it.vfsfitvnm.vimusic.utils.playlistSortByKey
-import it.vfsfitvnm.vimusic.utils.playlistSortOrderKey
-import it.vfsfitvnm.vimusic.utils.rememberPreference
+import com.hmusic.new.compose.persist.persistList
+import com.hmusic.new.Database
+import com.hmusic.new.LocalPlayerAwareWindowInsets
+import com.hmusic.new.R
+import com.hmusic.new.enums.BuiltInPlaylist
+import com.hmusic.new.enums.PlaylistSortBy
+import com.hmusic.new.enums.SortOrder
+import com.hmusic.new.models.Playlist
+import com.hmusic.new.models.PlaylistPreview
+import com.hmusic.new.query
+import com.hmusic.new.ui.components.themed.FloatingActionsContainerWithScrollToTop
+import com.hmusic.new.ui.components.themed.Header
+import com.hmusic.new.ui.components.themed.HeaderIconButton
+import com.hmusic.new.ui.components.themed.SecondaryTextButton
+import com.hmusic.new.ui.components.themed.TextFieldDialog
+import com.hmusic.new.ui.items.PlaylistItem
+import com.hmusic.new.ui.styling.Dimensions
+import com.hmusic.new.ui.styling.LocalAppearance
+import com.hmusic.new.ui.styling.px
+import com.hmusic.new.utils.playlistSortByKey
+import com.hmusic.new.utils.playlistSortOrderKey
+import com.hmusic.new.utils.rememberPreference
 
 @ExperimentalAnimationApi
 @ExperimentalFoundationApi

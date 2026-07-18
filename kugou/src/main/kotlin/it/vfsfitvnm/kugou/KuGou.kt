@@ -1,4 +1,4 @@
-package it.vfsfitvnm.kugou
+package com.hmusic.new.kugou
 
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
@@ -13,9 +13,9 @@ import io.ktor.http.ContentType
 import io.ktor.http.encodeURLParameter
 import io.ktor.serialization.kotlinx.json.json
 import io.ktor.util.decodeBase64String
-import it.vfsfitvnm.kugou.models.DownloadLyricsResponse
-import it.vfsfitvnm.kugou.models.SearchLyricsResponse
-import it.vfsfitvnm.kugou.models.SearchSongResponse
+import com.hmusic.new.kugou.models.DownloadLyricsResponse
+import com.hmusic.new.kugou.models.SearchLyricsResponse
+import com.hmusic.new.kugou.models.SearchSongResponse
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
 
@@ -26,6 +26,12 @@ object KuGou {
             BrowserUserAgent()
 
             expectSuccess = true
+
+            engine {
+                connectTimeout = 10_000
+                readTimeout = 10_000
+                writeTimeout = 10_000
+            }
 
             install(ContentNegotiation) {
                 val feature = Json {

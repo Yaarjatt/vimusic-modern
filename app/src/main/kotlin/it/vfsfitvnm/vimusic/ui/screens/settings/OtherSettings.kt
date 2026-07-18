@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.screens.settings
+package com.hmusic.new.ui.screens.settings
 
 import android.annotation.SuppressLint
 import android.content.ActivityNotFoundException
@@ -28,19 +28,19 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
-import it.vfsfitvnm.vimusic.Database
-import it.vfsfitvnm.vimusic.LocalPlayerAwareWindowInsets
-import it.vfsfitvnm.vimusic.query
-import it.vfsfitvnm.vimusic.service.PlayerMediaBrowserService
-import it.vfsfitvnm.vimusic.ui.components.themed.Header
-import it.vfsfitvnm.vimusic.ui.styling.LocalAppearance
-import it.vfsfitvnm.vimusic.utils.isAtLeastAndroid12
-import it.vfsfitvnm.vimusic.utils.isAtLeastAndroid6
-import it.vfsfitvnm.vimusic.utils.isIgnoringBatteryOptimizations
-import it.vfsfitvnm.vimusic.utils.isInvincibilityEnabledKey
-import it.vfsfitvnm.vimusic.utils.pauseSearchHistoryKey
-import it.vfsfitvnm.vimusic.utils.rememberPreference
-import it.vfsfitvnm.vimusic.utils.toast
+import com.hmusic.new.Database
+import com.hmusic.new.LocalPlayerAwareWindowInsets
+import com.hmusic.new.query
+import com.hmusic.new.service.PlayerMediaBrowserService
+import com.hmusic.new.ui.components.themed.Header
+import com.hmusic.new.ui.styling.LocalAppearance
+import com.hmusic.new.utils.isAtLeastAndroid12
+import com.hmusic.new.utils.isAtLeastAndroid6
+import com.hmusic.new.utils.isIgnoringBatteryOptimizations
+import com.hmusic.new.utils.isInvincibilityEnabledKey
+import com.hmusic.new.utils.pauseSearchHistoryKey
+import com.hmusic.new.utils.rememberPreference
+import com.hmusic.new.utils.toast
 import kotlinx.coroutines.flow.distinctUntilChanged
 
 @SuppressLint("BatteryLife")

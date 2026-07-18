@@ -4,12 +4,12 @@ plugins {
 }
 
 android {
-    namespace = "it.vfsfitvnm.compose.reordering"
-    compileSdk = 33
+    namespace = "com.hmusic.new.compose.reordering"
+    compileSdk = 35
 
     defaultConfig {
-        minSdk = 21
-        targetSdk = 33
+        minSdk = 26
+        targetSdk = 35
     }
 
     buildTypes {

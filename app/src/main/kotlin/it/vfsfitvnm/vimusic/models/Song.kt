@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.models
+package com.hmusic.new.models
 
 import androidx.compose.runtime.Immutable
 import androidx.room.Entity

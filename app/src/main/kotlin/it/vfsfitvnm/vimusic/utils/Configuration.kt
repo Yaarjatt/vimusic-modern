@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.utils
+package com.hmusic.new.utils
 
 import android.content.res.Configuration
 import androidx.compose.runtime.Composable

@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.components.themed
+package com.hmusic.new.ui.components.themed
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -16,10 +16,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import it.vfsfitvnm.vimusic.ui.styling.Dimensions
-import it.vfsfitvnm.vimusic.ui.styling.LocalAppearance
-import it.vfsfitvnm.vimusic.ui.styling.shimmer
-import it.vfsfitvnm.vimusic.utils.medium
+import com.hmusic.new.ui.styling.Dimensions
+import com.hmusic.new.ui.styling.LocalAppearance
+import com.hmusic.new.ui.styling.shimmer
+import com.hmusic.new.utils.medium
 import kotlin.random.Random
 
 @Composable

@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.screens.home
+package com.hmusic.new.ui.screens.home
 
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.animation.core.LinearEasing
@@ -31,33 +31,33 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import it.vfsfitvnm.compose.persist.persistList
-import it.vfsfitvnm.vimusic.Database
-import it.vfsfitvnm.vimusic.LocalPlayerAwareWindowInsets
-import it.vfsfitvnm.vimusic.LocalPlayerServiceBinder
-import it.vfsfitvnm.vimusic.R
-import it.vfsfitvnm.vimusic.enums.SongSortBy
-import it.vfsfitvnm.vimusic.enums.SortOrder
-import it.vfsfitvnm.vimusic.models.Song
-import it.vfsfitvnm.vimusic.ui.components.LocalMenuState
-import it.vfsfitvnm.vimusic.ui.components.themed.FloatingActionsContainerWithScrollToTop
-import it.vfsfitvnm.vimusic.ui.components.themed.Header
-import it.vfsfitvnm.vimusic.ui.components.themed.HeaderIconButton
-import it.vfsfitvnm.vimusic.ui.components.themed.InHistoryMediaItemMenu
-import it.vfsfitvnm.vimusic.ui.items.SongItem
-import it.vfsfitvnm.vimusic.ui.styling.Dimensions
-import it.vfsfitvnm.vimusic.ui.styling.LocalAppearance
-import it.vfsfitvnm.vimusic.ui.styling.onOverlay
-import it.vfsfitvnm.vimusic.ui.styling.overlay
-import it.vfsfitvnm.vimusic.ui.styling.px
-import it.vfsfitvnm.vimusic.utils.asMediaItem
-import it.vfsfitvnm.vimusic.utils.center
-import it.vfsfitvnm.vimusic.utils.color
-import it.vfsfitvnm.vimusic.utils.forcePlayAtIndex
-import it.vfsfitvnm.vimusic.utils.rememberPreference
-import it.vfsfitvnm.vimusic.utils.semiBold
-import it.vfsfitvnm.vimusic.utils.songSortByKey
-import it.vfsfitvnm.vimusic.utils.songSortOrderKey
+import com.hmusic.new.compose.persist.persistList
+import com.hmusic.new.Database
+import com.hmusic.new.LocalPlayerAwareWindowInsets
+import com.hmusic.new.LocalPlayerServiceBinder
+import com.hmusic.new.R
+import com.hmusic.new.enums.SongSortBy
+import com.hmusic.new.enums.SortOrder
+import com.hmusic.new.models.Song
+import com.hmusic.new.ui.components.LocalMenuState
+import com.hmusic.new.ui.components.themed.FloatingActionsContainerWithScrollToTop
+import com.hmusic.new.ui.components.themed.Header
+import com.hmusic.new.ui.components.themed.HeaderIconButton
+import com.hmusic.new.ui.components.themed.InHistoryMediaItemMenu
+import com.hmusic.new.ui.items.SongItem
+import com.hmusic.new.ui.styling.Dimensions
+import com.hmusic.new.ui.styling.LocalAppearance
+import com.hmusic.new.ui.styling.onOverlay
+import com.hmusic.new.ui.styling.overlay
+import com.hmusic.new.ui.styling.px
+import com.hmusic.new.utils.asMediaItem
+import com.hmusic.new.utils.center
+import com.hmusic.new.utils.color
+import com.hmusic.new.utils.forcePlayAtIndex
+import com.hmusic.new.utils.rememberPreference
+import com.hmusic.new.utils.semiBold
+import com.hmusic.new.utils.songSortByKey
+import com.hmusic.new.utils.songSortOrderKey
 
 @ExperimentalFoundationApi
 @ExperimentalAnimationApi

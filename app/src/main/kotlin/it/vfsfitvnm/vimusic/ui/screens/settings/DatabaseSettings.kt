@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.screens.settings
+package com.hmusic.new.ui.screens.settings
 
 import android.annotation.SuppressLint
 import android.content.ActivityNotFoundException
@@ -20,16 +20,16 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
-import it.vfsfitvnm.vimusic.Database
-import it.vfsfitvnm.vimusic.LocalPlayerAwareWindowInsets
-import it.vfsfitvnm.vimusic.internal
-import it.vfsfitvnm.vimusic.path
-import it.vfsfitvnm.vimusic.query
-import it.vfsfitvnm.vimusic.service.PlayerService
-import it.vfsfitvnm.vimusic.ui.components.themed.Header
-import it.vfsfitvnm.vimusic.ui.styling.LocalAppearance
-import it.vfsfitvnm.vimusic.utils.intent
-import it.vfsfitvnm.vimusic.utils.toast
+import com.hmusic.new.Database
+import com.hmusic.new.LocalPlayerAwareWindowInsets
+import com.hmusic.new.internal
+import com.hmusic.new.path
+import com.hmusic.new.query
+import com.hmusic.new.service.PlayerService
+import com.hmusic.new.ui.components.themed.Header
+import com.hmusic.new.ui.styling.LocalAppearance
+import com.hmusic.new.utils.intent
+import com.hmusic.new.utils.toast
 import java.io.FileInputStream
 import java.io.FileOutputStream
 import java.text.SimpleDateFormat

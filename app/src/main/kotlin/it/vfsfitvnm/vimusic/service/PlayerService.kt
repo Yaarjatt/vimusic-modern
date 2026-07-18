@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.service
+package com.hmusic.new.service
 
 import android.os.Binder as AndroidBinder
 import android.annotation.SuppressLint
@@ -67,45 +67,45 @@ import androidx.media3.exoplayer.source.MediaSource
 import androidx.media3.extractor.ExtractorsFactory
 import androidx.media3.extractor.mkv.MatroskaExtractor
 import androidx.media3.extractor.mp4.FragmentedMp4Extractor
-import it.vfsfitvnm.innertube.Innertube
-import it.vfsfitvnm.innertube.models.NavigationEndpoint
-import it.vfsfitvnm.innertube.models.bodies.PlayerBody
-import it.vfsfitvnm.innertube.requests.player
-import it.vfsfitvnm.vimusic.Database
-import it.vfsfitvnm.vimusic.MainActivity
-import it.vfsfitvnm.vimusic.R
-import it.vfsfitvnm.vimusic.enums.ExoPlayerDiskCacheMaxSize
-import it.vfsfitvnm.vimusic.models.Event
-import it.vfsfitvnm.vimusic.models.QueuedMediaItem
-import it.vfsfitvnm.vimusic.query
-import it.vfsfitvnm.vimusic.utils.InvincibleService
-import it.vfsfitvnm.vimusic.utils.RingBuffer
-import it.vfsfitvnm.vimusic.utils.TimerJob
-import it.vfsfitvnm.vimusic.utils.YouTubeRadio
-import it.vfsfitvnm.vimusic.utils.activityPendingIntent
-import it.vfsfitvnm.vimusic.utils.broadCastPendingIntent
-import it.vfsfitvnm.vimusic.utils.exoPlayerDiskCacheMaxSizeKey
-import it.vfsfitvnm.vimusic.utils.findNextMediaItemById
-import it.vfsfitvnm.vimusic.utils.forcePlayFromBeginning
-import it.vfsfitvnm.vimusic.utils.forceSeekToNext
-import it.vfsfitvnm.vimusic.utils.forceSeekToPrevious
-import it.vfsfitvnm.vimusic.utils.getEnum
-import it.vfsfitvnm.vimusic.utils.intent
-import it.vfsfitvnm.vimusic.utils.isAtLeastAndroid13
-import it.vfsfitvnm.vimusic.utils.isAtLeastAndroid6
-import it.vfsfitvnm.vimusic.utils.isAtLeastAndroid8
-import it.vfsfitvnm.vimusic.utils.isInvincibilityEnabledKey
-import it.vfsfitvnm.vimusic.utils.isShowingThumbnailInLockscreenKey
-import it.vfsfitvnm.vimusic.utils.mediaItems
-import it.vfsfitvnm.vimusic.utils.persistentQueueKey
-import it.vfsfitvnm.vimusic.utils.preferences
-import it.vfsfitvnm.vimusic.utils.queueLoopEnabledKey
-import it.vfsfitvnm.vimusic.utils.resumePlaybackWhenDeviceConnectedKey
-import it.vfsfitvnm.vimusic.utils.shouldBePlaying
-import it.vfsfitvnm.vimusic.utils.skipSilenceKey
-import it.vfsfitvnm.vimusic.utils.timer
-import it.vfsfitvnm.vimusic.utils.trackLoopEnabledKey
-import it.vfsfitvnm.vimusic.utils.volumeNormalizationKey
+import com.hmusic.new.innertube.Innertube
+import com.hmusic.new.innertube.models.NavigationEndpoint
+import com.hmusic.new.innertube.models.bodies.PlayerBody
+import com.hmusic.new.innertube.requests.player
+import com.hmusic.new.Database
+import com.hmusic.new.MainActivity
+import com.hmusic.new.R
+import com.hmusic.new.enums.ExoPlayerDiskCacheMaxSize
+import com.hmusic.new.models.Event
+import com.hmusic.new.models.QueuedMediaItem
+import com.hmusic.new.query
+import com.hmusic.new.utils.InvincibleService
+import com.hmusic.new.utils.RingBuffer
+import com.hmusic.new.utils.TimerJob
+import com.hmusic.new.utils.YouTubeRadio
+import com.hmusic.new.utils.activityPendingIntent
+import com.hmusic.new.utils.broadCastPendingIntent
+import com.hmusic.new.utils.exoPlayerDiskCacheMaxSizeKey
+import com.hmusic.new.utils.findNextMediaItemById
+import com.hmusic.new.utils.forcePlayFromBeginning
+import com.hmusic.new.utils.forceSeekToNext
+import com.hmusic.new.utils.forceSeekToPrevious
+import com.hmusic.new.utils.getEnum
+import com.hmusic.new.utils.intent
+import com.hmusic.new.utils.isAtLeastAndroid13
+import com.hmusic.new.utils.isAtLeastAndroid6
+import com.hmusic.new.utils.isAtLeastAndroid8
+import com.hmusic.new.utils.isInvincibilityEnabledKey
+import com.hmusic.new.utils.isShowingThumbnailInLockscreenKey
+import com.hmusic.new.utils.mediaItems
+import com.hmusic.new.utils.persistentQueueKey
+import com.hmusic.new.utils.preferences
+import com.hmusic.new.utils.queueLoopEnabledKey
+import com.hmusic.new.utils.resumePlaybackWhenDeviceConnectedKey
+import com.hmusic.new.utils.shouldBePlaying
+import com.hmusic.new.utils.skipSilenceKey
+import com.hmusic.new.utils.timer
+import com.hmusic.new.utils.trackLoopEnabledKey
+import com.hmusic.new.utils.volumeNormalizationKey
 import kotlin.math.roundToInt
 import kotlin.system.exitProcess
 import kotlinx.coroutines.CoroutineScope
@@ -673,7 +673,7 @@ class PlayerService : InvincibleService(), Player.Listener, PlaybackStatsListene
                 ?: R.drawable.app_icon)
             .setOngoing(false)
             .setContentIntent(activityPendingIntent<MainActivity>(
-                flags = PendingIntent.FLAG_UPDATE_CURRENT
+                flags = PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
             ) {
                 putExtra("expandPlayerBottomSheet", true)
             })
@@ -791,7 +791,7 @@ class PlayerService : InvincibleService(), Player.Listener, PlaybackStatsListene
                                         mediaItem?.let(Database::insert)
 
                                         Database.insert(
-                                            it.vfsfitvnm.vimusic.models.Format(
+                                            com.hmusic.new.models.Format(
                                                 songId = videoId,
                                                 itag = format.itag,
                                                 mimeType = format.mimeType,
@@ -991,10 +991,10 @@ class PlayerService : InvincibleService(), Player.Listener, PlaybackStatsListene
             )
 
         companion object {
-            val pause = Action("it.vfsfitvnm.vimusic.pause")
-            val play = Action("it.vfsfitvnm.vimusic.play")
-            val next = Action("it.vfsfitvnm.vimusic.next")
-            val previous = Action("it.vfsfitvnm.vimusic.previous")
+            val pause = Action("com.hmusic.new.pause")
+            val play = Action("com.hmusic.new.play")
+            val next = Action("com.hmusic.new.next")
+            val previous = Action("com.hmusic.new.previous")
         }
     }
 

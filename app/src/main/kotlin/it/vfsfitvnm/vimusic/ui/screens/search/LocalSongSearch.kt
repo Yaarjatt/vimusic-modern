@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.screens.search
+package com.hmusic.new.ui.screens.search
 
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -22,25 +22,25 @@ import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextAlign
-import it.vfsfitvnm.compose.persist.persistList
-import it.vfsfitvnm.innertube.models.NavigationEndpoint
-import it.vfsfitvnm.vimusic.Database
-import it.vfsfitvnm.vimusic.LocalPlayerAwareWindowInsets
-import it.vfsfitvnm.vimusic.LocalPlayerServiceBinder
-import it.vfsfitvnm.vimusic.models.Song
-import it.vfsfitvnm.vimusic.ui.components.LocalMenuState
-import it.vfsfitvnm.vimusic.ui.components.themed.FloatingActionsContainerWithScrollToTop
-import it.vfsfitvnm.vimusic.ui.components.themed.Header
-import it.vfsfitvnm.vimusic.ui.components.themed.InHistoryMediaItemMenu
-import it.vfsfitvnm.vimusic.ui.components.themed.SecondaryTextButton
-import it.vfsfitvnm.vimusic.ui.items.SongItem
-import it.vfsfitvnm.vimusic.ui.styling.Dimensions
-import it.vfsfitvnm.vimusic.ui.styling.LocalAppearance
-import it.vfsfitvnm.vimusic.ui.styling.px
-import it.vfsfitvnm.vimusic.utils.align
-import it.vfsfitvnm.vimusic.utils.asMediaItem
-import it.vfsfitvnm.vimusic.utils.forcePlay
-import it.vfsfitvnm.vimusic.utils.medium
+import com.hmusic.new.compose.persist.persistList
+import com.hmusic.new.innertube.models.NavigationEndpoint
+import com.hmusic.new.Database
+import com.hmusic.new.LocalPlayerAwareWindowInsets
+import com.hmusic.new.LocalPlayerServiceBinder
+import com.hmusic.new.models.Song
+import com.hmusic.new.ui.components.LocalMenuState
+import com.hmusic.new.ui.components.themed.FloatingActionsContainerWithScrollToTop
+import com.hmusic.new.ui.components.themed.Header
+import com.hmusic.new.ui.components.themed.InHistoryMediaItemMenu
+import com.hmusic.new.ui.components.themed.SecondaryTextButton
+import com.hmusic.new.ui.items.SongItem
+import com.hmusic.new.ui.styling.Dimensions
+import com.hmusic.new.ui.styling.LocalAppearance
+import com.hmusic.new.ui.styling.px
+import com.hmusic.new.utils.align
+import com.hmusic.new.utils.asMediaItem
+import com.hmusic.new.utils.forcePlay
+import com.hmusic.new.utils.medium
 
 @ExperimentalFoundationApi
 @ExperimentalAnimationApi

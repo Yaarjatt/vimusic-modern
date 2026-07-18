@@ -1,3 +1,3 @@
-package it.vfsfitvnm.compose.persist
+package com.hmusic.new.compose.persist
 
 typealias PersistMap = HashMap<String, Any?>

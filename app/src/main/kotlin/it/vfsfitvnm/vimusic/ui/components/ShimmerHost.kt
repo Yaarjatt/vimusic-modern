@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.components
+package com.hmusic.new.ui.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

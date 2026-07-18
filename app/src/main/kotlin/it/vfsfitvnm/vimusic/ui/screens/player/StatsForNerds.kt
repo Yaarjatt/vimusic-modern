@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.screens.player
+package com.hmusic.new.ui.screens.player
 
 import android.text.format.Formatter
 import androidx.compose.animation.AnimatedVisibility
@@ -27,17 +27,17 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.media3.datasource.cache.Cache
 import androidx.media3.datasource.cache.CacheSpan
-import it.vfsfitvnm.innertube.Innertube
-import it.vfsfitvnm.innertube.models.bodies.PlayerBody
-import it.vfsfitvnm.innertube.requests.player
-import it.vfsfitvnm.vimusic.Database
-import it.vfsfitvnm.vimusic.LocalPlayerServiceBinder
-import it.vfsfitvnm.vimusic.models.Format
-import it.vfsfitvnm.vimusic.ui.styling.LocalAppearance
-import it.vfsfitvnm.vimusic.ui.styling.onOverlay
-import it.vfsfitvnm.vimusic.ui.styling.overlay
-import it.vfsfitvnm.vimusic.utils.color
-import it.vfsfitvnm.vimusic.utils.medium
+import com.hmusic.new.innertube.Innertube
+import com.hmusic.new.innertube.models.bodies.PlayerBody
+import com.hmusic.new.innertube.requests.player
+import com.hmusic.new.Database
+import com.hmusic.new.LocalPlayerServiceBinder
+import com.hmusic.new.models.Format
+import com.hmusic.new.ui.styling.LocalAppearance
+import com.hmusic.new.ui.styling.onOverlay
+import com.hmusic.new.ui.styling.overlay
+import com.hmusic.new.utils.color
+import com.hmusic.new.utils.medium
 import kotlin.math.roundToInt
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay

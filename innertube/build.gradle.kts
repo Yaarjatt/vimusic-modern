@@ -1,23 +1,27 @@
-
 plugins {
     kotlin("jvm")
-    @Suppress("DSL_SCOPE_VIOLATION")
     alias(libs.plugins.kotlin.serialization)
 }
 
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
 sourceSets.all {
-    java.srcDir("src/$name/kotlin")
+    kotlin.srcDir("src/$name/kotlin")
 }
 
 dependencies {
-    implementation(projects.ktorClientBrotli)
+    implementation(projects.ktor.client.brotli)
 
     implementation(libs.ktor.client.core)
+    implementation(libs.ktor.client.okhttp)
     implementation(libs.ktor.client.cio)
     implementation(libs.ktor.client.content.negotiation)
     implementation(libs.ktor.client.encoding)
-    implementation(libs.ktor.client.serialization)
-    implementation(libs.ktor.serialization.json)
+    implementation(libs.ktor.serialization.kotlinx.json)
+    implementation(libs.kotlinx.serialization.json)
 
-    testImplementation(testLibs.junit)
+    testImplementation(libs.junit)
 }

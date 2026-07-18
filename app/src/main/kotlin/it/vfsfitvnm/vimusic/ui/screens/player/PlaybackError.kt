@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.screens.player
+package com.hmusic.new.ui.screens.player
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.fadeIn
@@ -20,11 +20,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.unit.dp
-import it.vfsfitvnm.vimusic.ui.styling.PureBlackColorPalette
-import it.vfsfitvnm.vimusic.ui.styling.LocalAppearance
-import it.vfsfitvnm.vimusic.utils.center
-import it.vfsfitvnm.vimusic.utils.color
-import it.vfsfitvnm.vimusic.utils.medium
+import com.hmusic.new.ui.styling.PureBlackColorPalette
+import com.hmusic.new.ui.styling.LocalAppearance
+import com.hmusic.new.utils.center
+import com.hmusic.new.utils.color
+import com.hmusic.new.utils.medium
 
 @Composable
 fun PlaybackError(

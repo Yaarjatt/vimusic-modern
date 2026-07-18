@@ -1,18 +1,18 @@
-package it.vfsfitvnm.innertube.requests
+package com.hmusic.new.innertube.requests
 
 import io.ktor.client.call.body
 import io.ktor.client.request.post
 import io.ktor.client.request.setBody
-import it.vfsfitvnm.innertube.Innertube
-import it.vfsfitvnm.innertube.models.BrowseResponse
-import it.vfsfitvnm.innertube.models.ContinuationResponse
-import it.vfsfitvnm.innertube.models.GridRenderer
-import it.vfsfitvnm.innertube.models.MusicResponsiveListItemRenderer
-import it.vfsfitvnm.innertube.models.MusicShelfRenderer
-import it.vfsfitvnm.innertube.models.MusicTwoRowItemRenderer
-import it.vfsfitvnm.innertube.models.bodies.BrowseBody
-import it.vfsfitvnm.innertube.models.bodies.ContinuationBody
-import it.vfsfitvnm.innertube.utils.runCatchingNonCancellable
+import com.hmusic.new.innertube.Innertube
+import com.hmusic.new.innertube.models.BrowseResponse
+import com.hmusic.new.innertube.models.ContinuationResponse
+import com.hmusic.new.innertube.models.GridRenderer
+import com.hmusic.new.innertube.models.MusicResponsiveListItemRenderer
+import com.hmusic.new.innertube.models.MusicShelfRenderer
+import com.hmusic.new.innertube.models.MusicTwoRowItemRenderer
+import com.hmusic.new.innertube.models.bodies.BrowseBody
+import com.hmusic.new.innertube.models.bodies.ContinuationBody
+import com.hmusic.new.innertube.utils.runCatchingNonCancellable
 
 suspend fun <T : Innertube.Item> Innertube.itemsPage(
     body: BrowseBody,

@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.enums
+package com.hmusic.new.enums
 
 enum class ExoPlayerDiskCacheMaxSize {
     `32MB`,

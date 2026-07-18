@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.components.themed
+package com.hmusic.new.ui.components.themed
 
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image
@@ -14,8 +14,8 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import it.vfsfitvnm.vimusic.ui.styling.LocalAppearance
-import it.vfsfitvnm.vimusic.ui.styling.primaryButton
+import com.hmusic.new.ui.styling.LocalAppearance
+import com.hmusic.new.ui.styling.primaryButton
 
 @Composable
 fun PrimaryButton(

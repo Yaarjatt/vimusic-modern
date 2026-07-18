@@ -1,7 +1,7 @@
-package it.vfsfitvnm.innertube.utils
+package com.hmusic.new.innertube.utils
 
-import it.vfsfitvnm.innertube.Innertube
-import it.vfsfitvnm.innertube.models.MusicTwoRowItemRenderer
+import com.hmusic.new.innertube.Innertube
+import com.hmusic.new.innertube.models.MusicTwoRowItemRenderer
 
 fun Innertube.AlbumItem.Companion.from(renderer: MusicTwoRowItemRenderer): Innertube.AlbumItem? {
     return Innertube.AlbumItem(

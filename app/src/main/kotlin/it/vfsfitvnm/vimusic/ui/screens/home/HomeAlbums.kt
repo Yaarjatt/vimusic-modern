@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.screens.home
+package com.hmusic.new.ui.screens.home
 
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.animation.core.LinearEasing
@@ -26,23 +26,23 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.unit.dp
-import it.vfsfitvnm.compose.persist.persist
-import it.vfsfitvnm.vimusic.Database
-import it.vfsfitvnm.vimusic.LocalPlayerAwareWindowInsets
-import it.vfsfitvnm.vimusic.R
-import it.vfsfitvnm.vimusic.enums.AlbumSortBy
-import it.vfsfitvnm.vimusic.enums.SortOrder
-import it.vfsfitvnm.vimusic.models.Album
-import it.vfsfitvnm.vimusic.ui.components.themed.FloatingActionsContainerWithScrollToTop
-import it.vfsfitvnm.vimusic.ui.components.themed.Header
-import it.vfsfitvnm.vimusic.ui.components.themed.HeaderIconButton
-import it.vfsfitvnm.vimusic.ui.items.AlbumItem
-import it.vfsfitvnm.vimusic.ui.styling.Dimensions
-import it.vfsfitvnm.vimusic.ui.styling.LocalAppearance
-import it.vfsfitvnm.vimusic.ui.styling.px
-import it.vfsfitvnm.vimusic.utils.albumSortByKey
-import it.vfsfitvnm.vimusic.utils.albumSortOrderKey
-import it.vfsfitvnm.vimusic.utils.rememberPreference
+import com.hmusic.new.compose.persist.persist
+import com.hmusic.new.Database
+import com.hmusic.new.LocalPlayerAwareWindowInsets
+import com.hmusic.new.R
+import com.hmusic.new.enums.AlbumSortBy
+import com.hmusic.new.enums.SortOrder
+import com.hmusic.new.models.Album
+import com.hmusic.new.ui.components.themed.FloatingActionsContainerWithScrollToTop
+import com.hmusic.new.ui.components.themed.Header
+import com.hmusic.new.ui.components.themed.HeaderIconButton
+import com.hmusic.new.ui.items.AlbumItem
+import com.hmusic.new.ui.styling.Dimensions
+import com.hmusic.new.ui.styling.LocalAppearance
+import com.hmusic.new.ui.styling.px
+import com.hmusic.new.utils.albumSortByKey
+import com.hmusic.new.utils.albumSortOrderKey
+import com.hmusic.new.utils.rememberPreference
 
 @ExperimentalFoundationApi
 @ExperimentalAnimationApi

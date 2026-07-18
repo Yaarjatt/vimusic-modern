@@ -1,4 +1,4 @@
-package it.vfsfitvnm.compose.persist
+package com.hmusic.new.compose.persist
 
 interface PersistMapOwner {
     val persistMap: PersistMap

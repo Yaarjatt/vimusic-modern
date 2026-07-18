@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.screens.searchresult
+package com.hmusic.new.ui.screens.searchresult
 
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.layout.Box
@@ -21,15 +21,15 @@ import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import it.vfsfitvnm.compose.persist.persist
-import it.vfsfitvnm.innertube.Innertube
-import it.vfsfitvnm.innertube.utils.plus
-import it.vfsfitvnm.vimusic.LocalPlayerAwareWindowInsets
-import it.vfsfitvnm.vimusic.ui.components.ShimmerHost
-import it.vfsfitvnm.vimusic.ui.components.themed.FloatingActionsContainerWithScrollToTop
-import it.vfsfitvnm.vimusic.ui.styling.LocalAppearance
-import it.vfsfitvnm.vimusic.utils.center
-import it.vfsfitvnm.vimusic.utils.secondary
+import com.hmusic.new.compose.persist.persist
+import com.hmusic.new.innertube.Innertube
+import com.hmusic.new.innertube.utils.plus
+import com.hmusic.new.LocalPlayerAwareWindowInsets
+import com.hmusic.new.ui.components.ShimmerHost
+import com.hmusic.new.ui.components.themed.FloatingActionsContainerWithScrollToTop
+import com.hmusic.new.ui.styling.LocalAppearance
+import com.hmusic.new.utils.center
+import com.hmusic.new.utils.secondary
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 

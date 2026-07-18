@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.screens.search
+package com.hmusic.new.ui.screens.search
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.ExperimentalAnimationApi
@@ -16,13 +16,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.TextRange
 import androidx.compose.ui.text.input.TextFieldValue
-import it.vfsfitvnm.compose.persist.PersistMapCleanup
-import it.vfsfitvnm.compose.routing.RouteHandler
-import it.vfsfitvnm.vimusic.R
-import it.vfsfitvnm.vimusic.ui.components.themed.Scaffold
-import it.vfsfitvnm.vimusic.ui.screens.globalRoutes
-import it.vfsfitvnm.vimusic.ui.styling.LocalAppearance
-import it.vfsfitvnm.vimusic.utils.secondary
+import com.hmusic.new.compose.persist.PersistMapCleanup
+import com.hmusic.new.compose.routing.RouteHandler
+import com.hmusic.new.R
+import com.hmusic.new.ui.components.themed.Scaffold
+import com.hmusic.new.ui.screens.globalRoutes
+import com.hmusic.new.ui.styling.LocalAppearance
+import com.hmusic.new.utils.secondary
 
 @ExperimentalFoundationApi
 @ExperimentalAnimationApi

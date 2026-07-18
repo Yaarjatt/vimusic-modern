@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.screens.settings
+package com.hmusic.new.ui.screens.settings
 
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.background
@@ -18,20 +18,20 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import it.vfsfitvnm.vimusic.LocalPlayerAwareWindowInsets
-import it.vfsfitvnm.vimusic.enums.ColorPaletteMode
-import it.vfsfitvnm.vimusic.enums.ColorPaletteName
-import it.vfsfitvnm.vimusic.enums.ThumbnailRoundness
-import it.vfsfitvnm.vimusic.ui.components.themed.Header
-import it.vfsfitvnm.vimusic.ui.styling.LocalAppearance
-import it.vfsfitvnm.vimusic.utils.applyFontPaddingKey
-import it.vfsfitvnm.vimusic.utils.colorPaletteModeKey
-import it.vfsfitvnm.vimusic.utils.colorPaletteNameKey
-import it.vfsfitvnm.vimusic.utils.isAtLeastAndroid13
-import it.vfsfitvnm.vimusic.utils.isShowingThumbnailInLockscreenKey
-import it.vfsfitvnm.vimusic.utils.rememberPreference
-import it.vfsfitvnm.vimusic.utils.thumbnailRoundnessKey
-import it.vfsfitvnm.vimusic.utils.useSystemFontKey
+import com.hmusic.new.LocalPlayerAwareWindowInsets
+import com.hmusic.new.enums.ColorPaletteMode
+import com.hmusic.new.enums.ColorPaletteName
+import com.hmusic.new.enums.ThumbnailRoundness
+import com.hmusic.new.ui.components.themed.Header
+import com.hmusic.new.ui.styling.LocalAppearance
+import com.hmusic.new.utils.applyFontPaddingKey
+import com.hmusic.new.utils.colorPaletteModeKey
+import com.hmusic.new.utils.colorPaletteNameKey
+import com.hmusic.new.utils.isAtLeastAndroid13
+import com.hmusic.new.utils.isShowingThumbnailInLockscreenKey
+import com.hmusic.new.utils.rememberPreference
+import com.hmusic.new.utils.thumbnailRoundnessKey
+import com.hmusic.new.utils.useSystemFontKey
 
 @ExperimentalAnimationApi
 @Composable

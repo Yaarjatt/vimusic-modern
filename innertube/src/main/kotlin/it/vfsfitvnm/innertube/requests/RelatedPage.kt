@@ -1,18 +1,18 @@
-package it.vfsfitvnm.innertube.requests
+package com.hmusic.new.innertube.requests
 
 import io.ktor.client.call.body
 import io.ktor.client.request.post
 import io.ktor.client.request.setBody
-import it.vfsfitvnm.innertube.Innertube
-import it.vfsfitvnm.innertube.models.BrowseResponse
-import it.vfsfitvnm.innertube.models.MusicCarouselShelfRenderer
-import it.vfsfitvnm.innertube.models.NextResponse
-import it.vfsfitvnm.innertube.models.bodies.BrowseBody
-import it.vfsfitvnm.innertube.models.bodies.NextBody
-import it.vfsfitvnm.innertube.utils.findSectionByStrapline
-import it.vfsfitvnm.innertube.utils.findSectionByTitle
-import it.vfsfitvnm.innertube.utils.from
-import it.vfsfitvnm.innertube.utils.runCatchingNonCancellable
+import com.hmusic.new.innertube.Innertube
+import com.hmusic.new.innertube.models.BrowseResponse
+import com.hmusic.new.innertube.models.MusicCarouselShelfRenderer
+import com.hmusic.new.innertube.models.NextResponse
+import com.hmusic.new.innertube.models.bodies.BrowseBody
+import com.hmusic.new.innertube.models.bodies.NextBody
+import com.hmusic.new.innertube.utils.findSectionByStrapline
+import com.hmusic.new.innertube.utils.findSectionByTitle
+import com.hmusic.new.innertube.utils.from
+import com.hmusic.new.innertube.utils.runCatchingNonCancellable
 
 suspend fun Innertube.relatedPage(body: NextBody) = runCatchingNonCancellable {
     val nextResponse = client.post(next) {

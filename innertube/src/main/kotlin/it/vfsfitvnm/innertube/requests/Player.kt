@@ -1,4 +1,4 @@
-package it.vfsfitvnm.innertube.requests
+package com.hmusic.new.innertube.requests
 
 import io.ktor.client.call.body
 import io.ktor.client.request.get
@@ -6,11 +6,11 @@ import io.ktor.client.request.post
 import io.ktor.client.request.setBody
 import io.ktor.http.ContentType
 import io.ktor.http.contentType
-import it.vfsfitvnm.innertube.Innertube
-import it.vfsfitvnm.innertube.models.Context
-import it.vfsfitvnm.innertube.models.PlayerResponse
-import it.vfsfitvnm.innertube.models.bodies.PlayerBody
-import it.vfsfitvnm.innertube.utils.runCatchingNonCancellable
+import com.hmusic.new.innertube.Innertube
+import com.hmusic.new.innertube.models.Context
+import com.hmusic.new.innertube.models.PlayerResponse
+import com.hmusic.new.innertube.models.bodies.PlayerBody
+import com.hmusic.new.innertube.utils.runCatchingNonCancellable
 import kotlinx.serialization.Serializable
 
 suspend fun Innertube.player(body: PlayerBody) = runCatchingNonCancellable {
@@ -50,9 +50,18 @@ suspend fun Innertube.player(body: PlayerBody) = runCatchingNonCancellable {
             return@runCatchingNonCancellable response
         }
 
-        val audioStreams = client.get("https://watchapi.whatever.social/streams/${body.videoId}") {
-            contentType(ContentType.Application.Json)
-        }.body<PipedResponse>().audioStreams
+        val audioStreams = try {
+            client.get("https://watchapi.whatever.social/streams/${body.videoId}") {
+                contentType(ContentType.Application.Json)
+                timeout {
+                    requestTimeoutMillis = 10_000
+                    connectTimeoutMillis = 10_000
+                    socketTimeoutMillis = 10_000
+                }
+            }.body<PipedResponse>().audioStreams
+        } catch (e: Exception) {
+            emptyList<AudioStream>()
+        }
 
         safePlayerResponse.copy(
             streamingData = safePlayerResponse.streamingData?.copy(

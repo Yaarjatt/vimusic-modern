@@ -1,6 +1,6 @@
 @file:Suppress("UNCHECKED_CAST")
 
-package it.vfsfitvnm.compose.routing
+package com.hmusic.new.compose.routing
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Immutable

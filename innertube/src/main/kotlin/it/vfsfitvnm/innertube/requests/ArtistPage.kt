@@ -1,24 +1,32 @@
-package it.vfsfitvnm.innertube.requests
+package com.hmusic.new.innertube.requests
 
 import io.ktor.client.call.body
 import io.ktor.client.request.post
 import io.ktor.client.request.setBody
-import it.vfsfitvnm.innertube.Innertube
-import it.vfsfitvnm.innertube.models.BrowseResponse
-import it.vfsfitvnm.innertube.models.MusicCarouselShelfRenderer
-import it.vfsfitvnm.innertube.models.MusicShelfRenderer
-import it.vfsfitvnm.innertube.models.SectionListRenderer
-import it.vfsfitvnm.innertube.models.bodies.BrowseBody
-import it.vfsfitvnm.innertube.utils.findSectionByTitle
-import it.vfsfitvnm.innertube.utils.from
-import it.vfsfitvnm.innertube.utils.runCatchingNonCancellable
+import com.hmusic.new.innertube.Innertube
+import com.hmusic.new.innertube.models.BrowseResponse
+import com.hmusic.new.innertube.models.MusicCarouselShelfRenderer
+import com.hmusic.new.innertube.models.MusicShelfRenderer
+import com.hmusic.new.innertube.models.SectionListRenderer
+import com.hmusic.new.innertube.models.bodies.BrowseBody
+import com.hmusic.new.innertube.utils.findSectionByTitle
+import com.hmusic.new.innertube.utils.from
+import com.hmusic.new.innertube.utils.runCatchingNonCancellable
 
 suspend fun Innertube.artistPage(body: BrowseBody): Result<Innertube.ArtistPage>? =
     runCatchingNonCancellable {
-        val response = client.post(browse) {
-            setBody(body)
-            mask("contents,header")
-        }.body<BrowseResponse>()
+        val response = try {
+            client.post(browse) {
+                setBody(body)
+                mask("contents,header")
+                timeout {
+                    requestTimeoutMillis = 15_000
+                    connectTimeoutMillis = 15_000
+                }
+            }.body<BrowseResponse>()
+        } catch (e: Exception) {
+            return runCatchingNonCancellable { null }.getOrNull()
+        } ?: return runCatchingNonCancellable { null }.getOrNull()
 
         fun findSectionByTitle(text: String): SectionListRenderer.Content? {
             return response

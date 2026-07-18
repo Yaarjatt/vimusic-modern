@@ -1,6 +1,6 @@
-package it.vfsfitvnm.innertube.models.bodies
+package com.hmusic.new.innertube.models.bodies
 
-import it.vfsfitvnm.innertube.models.Context
+import com.hmusic.new.innertube.models.Context
 import kotlinx.serialization.Serializable
 
 @Serializable

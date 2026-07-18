@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.screens.settings
+package com.hmusic.new.ui.screens.settings
 
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.background
@@ -14,11 +14,11 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalUriHandler
-import it.vfsfitvnm.vimusic.BuildConfig
-import it.vfsfitvnm.vimusic.LocalPlayerAwareWindowInsets
-import it.vfsfitvnm.vimusic.ui.components.themed.Header
-import it.vfsfitvnm.vimusic.ui.styling.LocalAppearance
-import it.vfsfitvnm.vimusic.utils.secondary
+import com.hmusic.new.BuildConfig
+import com.hmusic.new.LocalPlayerAwareWindowInsets
+import com.hmusic.new.ui.components.themed.Header
+import com.hmusic.new.ui.styling.LocalAppearance
+import com.hmusic.new.utils.secondary
 
 @ExperimentalAnimationApi
 @Composable

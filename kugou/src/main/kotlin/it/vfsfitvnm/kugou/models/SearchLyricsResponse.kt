@@ -1,4 +1,4 @@
-package it.vfsfitvnm.kugou.models
+package com.hmusic.new.kugou.models
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

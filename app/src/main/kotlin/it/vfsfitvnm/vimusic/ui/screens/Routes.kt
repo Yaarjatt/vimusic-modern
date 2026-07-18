@@ -1,16 +1,16 @@
-package it.vfsfitvnm.vimusic.ui.screens
+package com.hmusic.new.ui.screens
 
 import android.annotation.SuppressLint
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.runtime.Composable
-import it.vfsfitvnm.compose.routing.Route0
-import it.vfsfitvnm.compose.routing.Route1
-import it.vfsfitvnm.compose.routing.RouteHandlerScope
-import it.vfsfitvnm.vimusic.enums.BuiltInPlaylist
-import it.vfsfitvnm.vimusic.ui.screens.album.AlbumScreen
-import it.vfsfitvnm.vimusic.ui.screens.artist.ArtistScreen
-import it.vfsfitvnm.vimusic.ui.screens.playlist.PlaylistScreen
+import com.hmusic.new.compose.routing.Route0
+import com.hmusic.new.compose.routing.Route1
+import com.hmusic.new.compose.routing.RouteHandlerScope
+import com.hmusic.new.enums.BuiltInPlaylist
+import com.hmusic.new.ui.screens.album.AlbumScreen
+import com.hmusic.new.ui.screens.artist.ArtistScreen
+import com.hmusic.new.ui.screens.playlist.PlaylistScreen
 
 val albumRoute = Route1<String?>("albumRoute")
 val artistRoute = Route1<String?>("artistRoute")

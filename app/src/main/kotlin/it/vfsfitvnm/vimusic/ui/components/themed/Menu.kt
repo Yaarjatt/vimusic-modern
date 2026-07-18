@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.components.themed
+package com.hmusic.new.ui.components.themed
 
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image
@@ -22,9 +22,9 @@ import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import it.vfsfitvnm.vimusic.ui.styling.LocalAppearance
-import it.vfsfitvnm.vimusic.utils.medium
-import it.vfsfitvnm.vimusic.utils.secondary
+import com.hmusic.new.ui.styling.LocalAppearance
+import com.hmusic.new.utils.medium
+import com.hmusic.new.utils.secondary
 
 @Composable
 inline fun Menu(

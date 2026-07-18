@@ -1,8 +1,8 @@
-package it.vfsfitvnm.innertube.utils
+package com.hmusic.new.innertube.utils
 
 import io.ktor.utils.io.CancellationException
-import it.vfsfitvnm.innertube.Innertube
-import it.vfsfitvnm.innertube.models.SectionListRenderer
+import com.hmusic.new.innertube.Innertube
+import com.hmusic.new.innertube.models.SectionListRenderer
 
 internal fun SectionListRenderer.findSectionByTitle(text: String): SectionListRenderer.Content? {
     return contents?.find { content ->

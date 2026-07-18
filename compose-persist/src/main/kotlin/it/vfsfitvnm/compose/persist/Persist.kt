@@ -1,4 +1,4 @@
-package it.vfsfitvnm.compose.persist
+package com.hmusic.new.compose.persist
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
