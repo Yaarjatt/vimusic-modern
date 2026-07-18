@@ -64,7 +64,7 @@ jobs:
           ANDROID_HOME: ${{ env.ANDROID_HOME }}
 
       - name: Upload APK
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v4.6.0
         with:
           name: vimusic-modern-release
           path: app/build/outputs/apk/release/*.apk
