@@ -20,7 +20,7 @@ dependencyResolutionManagement {
     versionCatalogs {
         create("libs") {
             version("kotlin", "2.0.21")
-            version("agp", "8.5.0")
+            version("agp", "8.2.0")
 
             plugin("kotlin-serialization", "org.jetbrains.kotlin.plugin.serialization").versionRef("kotlin")
 
