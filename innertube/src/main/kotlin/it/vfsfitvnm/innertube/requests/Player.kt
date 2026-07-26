@@ -44,6 +44,10 @@ suspend fun Innertube.player(body: PlayerBody) = runCatchingNonCancellable {
                 )
             )
             mask("playabilityStatus.status,playerConfig.audioConfig,streamingData.adaptiveFormats,videoDetails.videoId")
+            timeout {
+                requestTimeoutMillis = 15_000
+                connectTimeoutMillis = 15_000
+            }
         }.body<PlayerResponse>()
 
         if (safePlayerResponse.playabilityStatus?.status != "OK") {

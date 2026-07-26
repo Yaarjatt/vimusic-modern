@@ -5,7 +5,7 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class NextBody(
-    val context: Context = Context.DefaultWeb,
+    val context: Context = Context.DefaultAndroid,
     val videoId: String?,
     val isAudioOnly: Boolean = true,
     val playlistId: String? = null,

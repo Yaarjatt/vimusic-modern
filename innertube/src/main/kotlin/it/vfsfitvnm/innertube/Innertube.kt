@@ -20,8 +20,6 @@ import kotlinx.serialization.json.Json
 
 object Innertube {
     val client = HttpClient(OkHttp) {
-        BrowserUserAgent()
-
         expectSuccess = true
 
         engine {
@@ -46,7 +44,10 @@ object Innertube {
         defaultRequest {
             url(scheme = "https", host ="music.youtube.com") {
                 headers.append(HttpHeaders.ContentType, ContentType.Application.Json.toString())
-                headers.append("X-Goog-Api-Key", "AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8")
+                headers.append("X-Goog-Api-Key", "AIzaSyAOghZGza2MQSZkY_zfZ370N-PUdXEo8AI")
+                headers.append("User-Agent", "com.google.android.apps.youtube.music/7.04.52 (Linux; U; Android 14; Pixel 8) AppleWebKit/537.36 (KHTML, like Gecko)")
+                headers.append("X-YouTube-Client-Name", "ANDROID_MUSIC")
+                headers.append("X-YouTube-Client-Version", "7.04.52")
                 parameters.append("prettyPrint", "false")
             }
         }

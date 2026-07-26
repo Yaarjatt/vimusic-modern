@@ -5,7 +5,7 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class QueueBody(
-    val context: Context = Context.DefaultWeb,
+    val context: Context = Context.DefaultAndroid,
     val videoIds: List<String>? = null,
     val playlistId: String? = null,
 )

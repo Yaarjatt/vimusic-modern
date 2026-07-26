@@ -35,10 +35,10 @@ data class Context(
         val DefaultAndroid = Context(
             client = Client(
                 clientName = "ANDROID_MUSIC",
-                clientVersion = "5.28.1",
+                clientVersion = "7.04.52",
                 platform = "MOBILE",
-                androidSdkVersion = 30,
-                userAgent = "com.google.android.apps.youtube.music/5.28.1 (Linux; U; Android 11) gzip"
+                androidSdkVersion = 34,
+                userAgent = "com.google.android.apps.youtube.music/7.04.52 (Linux; U; Android 14) gzip"
             )
         )
 
