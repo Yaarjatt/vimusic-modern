@@ -2,6 +2,7 @@ enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {
     repositories {
+        maven { url = uri("file://${rootDir}/plugins") }
         google()
         mavenCentral()
         gradlePluginPortal()
@@ -20,7 +21,7 @@ dependencyResolutionManagement {
     versionCatalogs {
         create("libs") {
             version("kotlin", "2.0.21")
-            version("agp", "8.2.0")
+            version("agp", "8.5.0")
 
             plugin("kotlin-serialization", "org.jetbrains.kotlin.plugin.serialization").versionRef("kotlin")
 
