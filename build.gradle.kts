@@ -1,9 +1,17 @@
-plugins {
-    id("com.android.application") version "8.2.0" apply false
-    id("org.jetbrains.kotlin.android") version "2.0.21" apply false
-    id("org.jetbrains.kotlin.plugin.serialization") version "2.0.21" apply false
-    id("org.jetbrains.kotlin.plugin.compose") version "2.0.21" apply false
+buildscript {
+    dependencies {
+        classpath(files("plugins/com/android/tools/build/gradle/8.5.0/gradle-8.5.0.jar"))
+    }
 }
+
+plugins {
+    id("com.android.application") version "7.3.0" apply false
+    id("org.jetbrains.kotlin.android") version "1.7.20" apply false
+    id("org.jetbrains.kotlin.plugin.serialization") version "1.7.20" apply false
+    id("org.jetbrains.kotlin.plugin.compose") version "1.3.2" apply false
+}
+
+apply(plugin = "com.android.application")
 
 tasks.register("clean", Delete::class) {
     delete(rootProject.layout.buildDirectory)

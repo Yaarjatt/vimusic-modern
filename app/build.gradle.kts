@@ -7,13 +7,13 @@ plugins {
 }
 
 android {
-    namespace = "com.hmusic.new"
-    compileSdk = 35
+    namespace = "it.vfsfitvnm.vimusic"
+    compileSdk = 33
 
     defaultConfig {
-        applicationId = "com.hmusic.new"
-        minSdk = 26
-        targetSdk = 35
+        applicationId = "it.vfsfitvnm.vimusic"
+        minSdk = 21
+        targetSdk = 33
         versionCode = 20
         versionName = "0.5.4"
     }
@@ -56,6 +56,10 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
 
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = libs.versions.compose.compiler.get()
+    }
 
     kotlinOptions {
         freeCompilerArgs += listOf(

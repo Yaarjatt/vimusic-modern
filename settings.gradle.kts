@@ -19,7 +19,7 @@ dependencyResolutionManagement {
 
     versionCatalogs {
         create("libs") {
-            version("kotlin", "2.0.21")
+            version("kotlin", "1.7.20")
             version("agp", "8.2.0")
 
             plugin("kotlin-serialization", "org.jetbrains.kotlin.plugin.serialization").versionRef("kotlin")
@@ -27,7 +27,7 @@ dependencyResolutionManagement {
             library("kotlin-coroutines-core", "org.jetbrains.kotlinx", "kotlinx-coroutines-core").version("1.9.0")
             library("kotlin-coroutines-android", "org.jetbrains.kotlinx", "kotlinx-coroutines-android").version("1.9.0")
 
-            version("compose-bom", "2024.09.00")
+            version("compose-bom", "2022.10.00")
             library("compose-bom", "androidx.compose", "compose-bom").versionRef("compose-bom")
 
             library("compose-foundation", "androidx.compose.foundation", "foundation").versionRef("compose-bom")
@@ -41,7 +41,7 @@ dependencyResolutionManagement {
 
             library("compose-shimmer", "com.valentinilk.shimmer", "compose-shimmer").version("1.3.2")
 
-            version("compose-compiler", "2.0.21")
+            version("compose-compiler", "1.3.2")
             plugin("compose-compiler", "org.jetbrains.kotlin.plugin.compose").versionRef("compose-compiler")
 
             version("room", "2.6.1")
@@ -91,6 +91,6 @@ include(":app")
 include(":compose-routing")
 include(":compose-reordering")
 include(":compose-persist")
-include(":innertube")
-include(":ktor-client-brotli")
-include(":kugou")
+// include(":innertube")  # TEMP: disabled for base build test
+// include(":ktor-client-brotli")  # TEMP: disabled for base build test
+// include(":kugou")  # TEMP: disabled for base build test
