@@ -30,9 +30,7 @@ open class Route internal constructor(val tag: String) {
 
 @Immutable
 class Route0(tag: String) : Route(tag) {
-    context(RouteHandlerScope)
-    @Composable
-    operator fun invoke(content: @Composable () -> Unit) {
+    fun invoke(content: @Composable () -> Unit, scope: RouteHandlerScope) {
         if (this == route) {
             content()
         }

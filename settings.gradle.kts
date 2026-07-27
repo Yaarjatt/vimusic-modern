@@ -2,7 +2,6 @@ enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {
     repositories {
-        maven { url = uri("file://${rootDir}/plugins") }
         google()
         mavenCentral()
         gradlePluginPortal()
@@ -21,7 +20,7 @@ dependencyResolutionManagement {
     versionCatalogs {
         create("libs") {
             version("kotlin", "2.0.21")
-            version("agp", "8.5.0")
+            version("agp", "8.2.0")
 
             plugin("kotlin-serialization", "org.jetbrains.kotlin.plugin.serialization").versionRef("kotlin")
 
@@ -42,7 +41,7 @@ dependencyResolutionManagement {
 
             library("compose-shimmer", "com.valentinilk.shimmer", "compose-shimmer").version("1.3.2")
 
-            version("compose-compiler", "1.5.15")
+            version("compose-compiler", "2.0.21")
             plugin("compose-compiler", "org.jetbrains.kotlin.plugin.compose").versionRef("compose-compiler")
 
             version("room", "2.6.1")

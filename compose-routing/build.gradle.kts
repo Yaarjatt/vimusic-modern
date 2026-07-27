@@ -32,12 +32,8 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 
-    composeOptions {
-        kotlinCompilerExtensionVersion = libs.versions.compose.compiler.get()
-    }
 
     kotlinOptions {
-        freeCompilerArgs += "-Xcontext-receivers"
         jvmTarget = "1.8"
     }
 }
