@@ -10,8 +10,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
 
     steps:
       - name: Checkout
@@ -24,25 +22,18 @@ jobs:
           distribution: 'temurin'
           cache: gradle
 
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
-        with:
-          cmdline-tools-version: latest
-          accept-android-sdk-licenses: true
-          log-accepted-android-sdk-licenses: true
-          packages: |
-            platforms;android-35
-            build-tools;35.0.0
-            platform-tools
-            cmdline-tools;latest
+      - name: Accept Android SDK licenses
+        run: yes | ${ANDROID_SDK_ROOT}/cmdline-tools/latest/bin/sdkmanager --licenses || true
+
+      - name: Install required SDK components
+        run: |
+          ${ANDROID_SDK_ROOT}/cmdline-tools/latest/bin/sdkmanager \
+            "platforms;android-33" \
+            "build-tools;33.0.2" \
+            "platform-tools" || true
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
-
-      - name: Set environment variables
-        run: |
-          echo "ANDROID_HOME=${ANDROID_HOME}" >> $GITHUB_ENV
-          echo "JAVA_HOME=${JAVA_HOME}" >> $GITHUB_ENV
 
       - name: Cache Gradle
         uses: actions/cache@v4
@@ -55,19 +46,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle-
 
-      - name: Download Android SDK components (if needed)
-        run: |
-          yes | sdkmanager --licenses --sdk_root=${ANDROID_HOME} || true
-          sdkmanager --install "platforms;android-35" "build-tools;35.0.0" "platform-tools" "cmdline-tools;latest" --sdk_root=${ANDROID_HOME} || true
-
       - name: Build APK
-        run: ./gradlew assembleRelease --no-daemon --stacktrace --info --refresh-dependencies
-        env:
-          JAVA_HOME: ${{ env.JAVA_HOME }}
-          ANDROID_HOME: ${{ env.ANDROID_HOME }}
+        run: ./gradlew assembleRelease --no-daemon --stacktrace
 
       - name: Upload APK
-        uses: actions/upload-artifact@v4.6.0
+        uses: actions/upload-artifact@v4
         with:
           name: vimusic-modern-release
           path: app/build/outputs/apk/release/*.apk

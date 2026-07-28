@@ -30,10 +30,10 @@ dependencyResolutionManagement {
             version("compose-bom", "2022.10.00")
             library("compose-bom", "androidx.compose", "compose-bom").versionRef("compose-bom")
 
-            library("compose-foundation", "androidx.compose.foundation", "foundation").versionRef("compose-bom")
-            library("compose-ui", "androidx.compose.ui", "ui").versionRef("compose-bom")
-            library("compose-ui-util", "androidx.compose.ui", "ui-util").versionRef("compose-bom")
-            library("compose-material3", "androidx.compose.material3", "material3").versionRef("compose-bom")
+            library("compose-foundation", "androidx.compose.foundation", "foundation").withoutVersion()
+            library("compose-ui", "androidx.compose.ui", "ui").withoutVersion()
+            library("compose-ui-util", "androidx.compose.ui", "ui-util").withoutVersion()
+            library("compose-material3", "androidx.compose.material3", "material3").withoutVersion()
             library("compose-material3-window-size", "androidx.compose.material3", "material3-window-size-class").version("1.3.0")
             library("compose-activity", "androidx.activity", "activity-compose").version("1.9.3")
             library("compose-viewmodel", "androidx.lifecycle", "lifecycle-viewmodel-compose").version("2.8.6")
@@ -76,6 +76,7 @@ dependencyResolutionManagement {
 
             version("desugaring", "2.1.3")
             library("desugar", "com.android.tools", "desugar_jdk_libs").versionRef("desugaring")
+            library("junit", "junit", "junit").version("4.13.2")
         }
 
         create("testLibs") {
@@ -91,6 +92,6 @@ include(":app")
 include(":compose-routing")
 include(":compose-reordering")
 include(":compose-persist")
-// include(":innertube")  # TEMP: disabled for base build test
-// include(":ktor-client-brotli")  # TEMP: disabled for base build test
-// include(":kugou")  # TEMP: disabled for base build test
+include(":innertube")
+include(":ktor-client-brotli")
+include(":kugou")

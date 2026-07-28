@@ -23,5 +23,5 @@ dependencies {
     implementation(libs.ktor.serialization.kotlinx.json)
     implementation(libs.kotlinx.serialization.json)
 
-    testImplementation(libs.junit)
+    testImplementation(testLibs.junit)
 }

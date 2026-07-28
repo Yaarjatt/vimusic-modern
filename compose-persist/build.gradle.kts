@@ -5,11 +5,11 @@ plugins {
 
 android {
     namespace = "com.hmusic.new.compose.persist"
-    compileSdk = 35
+    compileSdk = 33
 
     defaultConfig {
-        minSdk = 26
-        targetSdk = 35
+        minSdk = 21
+        targetSdk = 33
     }
 
     buildTypes {
@@ -42,5 +42,6 @@ android {
 }
 
 dependencies {
+    implementation(platform(libs.compose.bom))
     implementation(libs.compose.foundation)
 }

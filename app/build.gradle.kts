@@ -133,10 +133,10 @@ dependencies {
     implementation(projects.composeReordering)
 
     // Testing
-    testImplementation(libs.junit)
+    testImplementation(testLibs.junit)
     androidTestImplementation(platform(libs.compose.bom))
-    androidTestImplementation(libs.androidx.test)
-    androidTestImplementation(libs.androidx.test.espresso)
+    androidTestImplementation(testLibs.androidx.test)
+    androidTestImplementation(testLibs.espresso)
 
     coreLibraryDesugaring(libs.desugar)
 }

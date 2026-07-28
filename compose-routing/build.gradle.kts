@@ -5,11 +5,11 @@ plugins {
 
 android {
     namespace = "com.hmusic.new.compose.routing"
-    compileSdk = 35
+    compileSdk = 33
 
     defaultConfig {
-        minSdk = 26
-        targetSdk = 35
+        minSdk = 21
+        targetSdk = 33
     }
 
     buildTypes {
@@ -32,6 +32,9 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 
+    composeOptions {
+        kotlinCompilerExtensionVersion = libs.versions.compose.compiler.get()
+    }
 
     kotlinOptions {
         jvmTarget = "1.8"
@@ -39,6 +42,7 @@ android {
 }
 
 dependencies {
+    implementation(platform(libs.compose.bom))
     implementation(libs.compose.activity)
     implementation(libs.compose.foundation)
 }
