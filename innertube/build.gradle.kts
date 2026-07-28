@@ -13,7 +13,7 @@ sourceSets.all {
 }
 
 dependencies {
-    implementation(projects.ktor.client.brotli)
+    implementation(projects.ktorClientBrotli)
 
     implementation(libs.ktor.client.core)
     implementation(libs.ktor.client.okhttp)

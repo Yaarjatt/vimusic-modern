@@ -69,7 +69,7 @@ android {
         jvmTarget = "17"
     }
 
-    packaging {
+    packagingOptions {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
@@ -123,7 +123,7 @@ dependencies {
 
     // Networking (Innertube)
     implementation(projects.innertube)
-    implementation(projects.ktor.client.brotli)
+    implementation(projects.ktorClientBrotli)
     implementation(projects.kugou)
 
     // Compose custom modules
