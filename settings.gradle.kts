@@ -44,7 +44,7 @@ dependencyResolutionManagement {
             version("compose-compiler", "1.3.2")
             plugin("compose-compiler", "org.jetbrains.kotlin.plugin.compose").versionRef("compose-compiler")
 
-            version("room", "2.6.1")
+            version("room", "2.5.2")
             library("room-runtime", "androidx.room", "room-runtime").versionRef("room")
             library("room-ktx", "androidx.room", "room-ktx").versionRef("room")
             library("room-compiler", "androidx.room", "room-compiler").versionRef("room")
@@ -56,7 +56,7 @@ dependencyResolutionManagement {
             library("media3-common", "androidx.media3", "media3-common").versionRef("media3")
             library("media3-ui", "androidx.media3", "media3-ui").versionRef("media3")
 
-            version("ktor", "3.0.2")
+            version("ktor", "2.3.12")
             library("ktor-client-core", "io.ktor", "ktor-client-core").versionRef("ktor")
             library("ktor-client-okhttp", "io.ktor", "ktor-client-okhttp").versionRef("ktor")
             library("ktor-client-cio", "io.ktor", "ktor-client-cio").versionRef("ktor")
