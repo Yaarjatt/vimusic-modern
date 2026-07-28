@@ -3,7 +3,6 @@ plugins {
     kotlin("android")
     kotlin("kapt")
     kotlin("plugin.serialization")
-    kotlin("plugin.compose")
 }
 
 android {
